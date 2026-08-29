@@ -1,12 +1,19 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Nageswara Rao | Portfolio</title>
 
 <style>
+
+/* =========================
+   GENERAL
+========================= */
 
 *{
     margin:0;
@@ -22,7 +29,9 @@ body{
     line-height:1.6;
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 
 nav{
     position:fixed;
@@ -59,8 +68,9 @@ nav ul li a:hover{
     color:#38bdf8;
 }
 
-
-/* HOME */
+/* =========================
+   HOME
+========================= */
 
 #home{
     min-height:100vh;
@@ -112,14 +122,16 @@ nav ul li a:hover{
     border-radius:8px;
     text-decoration:none;
     font-weight:bold;
+    margin:5px;
 }
 
 .btn:hover{
     background:#0369a1;
 }
 
-
-/* PROFILE */
+/* =========================
+   PROFILE IMAGE
+========================= */
 
 .profile{
     width:280px;
@@ -136,8 +148,9 @@ nav ul li a:hover{
     box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
-
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 
 section{
     padding:90px 8%;
@@ -149,8 +162,9 @@ section{
     margin-bottom:40px;
 }
 
-
-/* ABOUT */
+/* =========================
+   ABOUT
+========================= */
 
 #about{
     background:#f5f7fb;
@@ -171,8 +185,9 @@ section{
     font-size:18px;
 }
 
-
-/* EDUCATION */
+/* =========================
+   EDUCATION
+========================= */
 
 #education{
     background:white;
@@ -197,8 +212,9 @@ section{
     margin-bottom:8px;
 }
 
-
-/* SKILLS */
+/* =========================
+   SKILLS
+========================= */
 
 #skills{
     background:#f5f7fb;
@@ -223,8 +239,9 @@ section{
     box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
-
-/* PROJECTS */
+/* =========================
+   PROJECTS
+========================= */
 
 #projects{
     background:white;
@@ -254,8 +271,9 @@ section{
     margin-bottom:10px;
 }
 
-
-/* CERTIFICATES */
+/* =========================
+   CERTIFICATES
+========================= */
 
 #certificates{
     background:#f5f7fb;
@@ -304,8 +322,36 @@ section{
     margin-top:15px;
 }
 
+/* =========================
+   RESUME
+========================= */
 
-/* CONTACT */
+#resume{
+    background:white;
+    text-align:center;
+}
+
+.resume-box{
+    max-width:700px;
+    margin:auto;
+
+    background:#f8fafc;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.resume-box p{
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+/* =========================
+   CONTACT
+========================= */
 
 #contact{
     background:#111827;
@@ -332,8 +378,9 @@ section{
     text-decoration:none;
 }
 
-
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     background:#030712;
@@ -342,8 +389,9 @@ footer{
     padding:20px;
 }
 
-
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:800px){
 
@@ -381,13 +429,16 @@ footer{
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- NAVIGATION -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
 
@@ -422,6 +473,10 @@ Nageswara Rao
 </li>
 
 <li>
+<a href="#resume">Resume</a>
+</li>
+
+<li>
 <a href="#contact">Contact</a>
 </li>
 
@@ -430,8 +485,9 @@ Nageswara Rao
 </nav>
 
 
-
-<!-- HOME -->
+<!-- =========================
+     HOME
+========================= -->
 
 <section id="home">
 
@@ -458,10 +514,14 @@ technology projects.
 Explore My Portfolio
 </a>
 
+<a href="resume.pdf" class="btn" target="_blank">
+View My Resume
+</a>
+
 </div>
 
 
-<!-- Profile photo -->
+<!-- PROFILE PHOTO -->
 
 <div>
 
@@ -476,8 +536,9 @@ alt="Nageswara Rao"
 </section>
 
 
-
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section id="about">
 
@@ -515,8 +576,9 @@ that solve real-world problems.
 </section>
 
 
-
-<!-- EDUCATION -->
+<!-- =========================
+     EDUCATION
+========================= -->
 
 <section id="education">
 
@@ -548,8 +610,9 @@ Computer Science and Engineering.
 </section>
 
 
-
-<!-- SKILLS -->
+<!-- =========================
+     SKILLS
+========================= -->
 
 <section id="skills">
 
@@ -582,8 +645,9 @@ My Skills
 </section>
 
 
-
-<!-- PROJECTS -->
+<!-- =========================
+     PROJECTS
+========================= -->
 
 <section id="projects">
 
@@ -608,7 +672,6 @@ website created using HTML and CSS.
 </div>
 
 
-
 <div class="project">
 
 <h3>
@@ -622,7 +685,6 @@ contact information.
 </p>
 
 </div>
-
 
 
 <div class="project">
@@ -645,8 +707,9 @@ useful insights.
 </section>
 
 
-
-<!-- CERTIFICATES -->
+<!-- =========================
+     CERTIFICATES
+========================= -->
 
 <section id="certificates">
 
@@ -680,7 +743,6 @@ Sai University
 </div>
 
 
-
 <div class="certificate">
 
 <div class="certificate-box">
@@ -704,7 +766,6 @@ Sai University
 </div>
 
 
-
 <div class="certificate">
 
 <div class="certificate-box">
@@ -733,8 +794,50 @@ Sai University
 </section>
 
 
+<!-- =========================
+     RESUME
+========================= -->
 
-<!-- CONTACT -->
+<section id="resume">
+
+<h2 class="section-title">
+My Resume
+</h2>
+
+<div class="resume-box">
+
+<p>
+You can view or download my latest resume
+to learn more about my education, skills,
+projects and experience.
+</p>
+
+<a
+href="resume.pdf"
+class="btn"
+target="_blank">
+
+View Resume
+
+</a>
+
+<a
+href="resume.pdf"
+class="btn"
+download>
+
+Download Resume
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section id="contact">
 
@@ -755,6 +858,7 @@ njangili637@gmail.com
 
 <p>
 🔗 LinkedIn:
+
 <a
 href="https://www.linkedin.com/in/nageswara-rao-jangili-28b653374"
 target="_blank">
@@ -762,18 +866,21 @@ target="_blank">
 Nageswara Rao Jangili
 
 </a>
+
 </p>
 
 
 <p>
 💻 GitHub:
+
 <a
-href="https://github.com/njangili636-source"
+href="https://github.com/nageswararao-j-127"
 target="_blank">
 
-njangili636-source
+nageswararao-j-127
 
 </a>
+
 </p>
 
 
@@ -782,8 +889,9 @@ njangili636-source
 </section>
 
 
-
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -796,4 +904,8 @@ All Rights Reserved.
 
 
 </body>
+
 </html>
+```
+
+
