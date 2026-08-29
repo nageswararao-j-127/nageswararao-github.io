@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,8 +23,8 @@
 
 body{
     font-family:Arial, sans-serif;
-    background:#f5f7fb;
-    color:#1f2937;
+    background:#f0fdfa;
+    color:#1e293b;
     line-height:1.6;
 }
 
@@ -38,16 +37,22 @@ nav{
     top:0;
     left:0;
     width:100%;
-    background:#111827;
-    padding:18px 7%;
+
+    background:#0f172a;
+
+    padding:17px 7%;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     z-index:1000;
+
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
 }
 
 .logo{
-    color:#38bdf8;
+    color:#2dd4bf;
     font-size:25px;
     font-weight:bold;
 }
@@ -55,7 +60,7 @@ nav{
 nav ul{
     display:flex;
     list-style:none;
-    gap:22px;
+    gap:20px;
 }
 
 nav ul li a{
@@ -65,7 +70,7 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    color:#38bdf8;
+    color:#2dd4bf;
 }
 
 /* =========================
@@ -73,18 +78,23 @@ nav ul li a:hover{
 ========================= */
 
 #home{
+
     min-height:100vh;
+
     padding:140px 8% 70px;
 
     display:flex;
+
     justify-content:center;
     align-items:center;
 
-    gap:70px;
+    gap:80px;
 
-    background:linear-gradient(
+    background:
+    linear-gradient(
         135deg,
-        #ffffff,
+        #ecfeff,
+        #ccfbf1,
         #e0f2fe
     );
 }
@@ -99,34 +109,44 @@ nav ul li a:hover{
 }
 
 .home-text h1 span{
-    color:#0284c7;
+    color:#0f766e;
 }
 
 .home-text h2{
     font-size:25px;
     margin-bottom:20px;
-    color:#374151;
+    color:#334155;
 }
 
 .home-text p{
     font-size:18px;
-    color:#4b5563;
+    color:#475569;
     margin-bottom:25px;
 }
 
 .btn{
     display:inline-block;
-    background:#0284c7;
+
+    background:#0f766e;
+
     color:white;
-    padding:13px 25px;
+
+    padding:13px 24px;
+
     border-radius:8px;
+
     text-decoration:none;
+
     font-weight:bold;
+
     margin:5px;
+
+    transition:0.3s;
 }
 
 .btn:hover{
-    background:#0369a1;
+    background:#115e59;
+    transform:translateY(-2px);
 }
 
 /* =========================
@@ -134,18 +154,19 @@ nav ul li a:hover{
 ========================= */
 
 .profile{
-    width:280px;
-    height:280px;
+    width:290px;
+    height:290px;
 
     border-radius:50%;
 
     object-fit:cover;
 
-    border:6px solid #0284c7;
+    border:7px solid #0f766e;
 
-    background:#dbeafe;
+    background:#ccfbf1;
 
-    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    box-shadow:
+    0 15px 35px rgba(15,118,110,0.25);
 }
 
 /* =========================
@@ -158,8 +179,12 @@ section{
 
 .section-title{
     text-align:center;
+
     font-size:36px;
-    margin-bottom:40px;
+
+    margin-bottom:45px;
+
+    color:#0f172a;
 }
 
 /* =========================
@@ -167,11 +192,13 @@ section{
 ========================= */
 
 #about{
-    background:#f5f7fb;
+    background:#f8fafc;
 }
 
 .about-box{
+
     max-width:900px;
+
     margin:auto;
 
     background:white;
@@ -180,9 +207,14 @@ section{
 
     border-radius:15px;
 
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    box-shadow:
+    0 8px 25px rgba(15,23,42,0.08);
 
     font-size:18px;
+}
+
+.about-box b{
+    color:#0f766e;
 }
 
 /* =========================
@@ -190,26 +222,48 @@ section{
 ========================= */
 
 #education{
-    background:white;
+    background:#ecfeff;
+}
+
+.education-container{
+
+    max-width:900px;
+
+    margin:auto;
 }
 
 .education-box{
-    max-width:900px;
-    margin:auto;
 
-    background:#f8fafc;
+    background:white;
 
-    padding:30px;
+    padding:25px 30px;
 
-    border-left:6px solid #0284c7;
+    margin-bottom:20px;
+
+    border-left:6px solid #0f766e;
 
     border-radius:10px;
+
+    box-shadow:
+    0 6px 20px rgba(15,23,42,0.08);
+
+    transition:0.3s;
+}
+
+.education-box:hover{
+    transform:translateX(5px);
 }
 
 .education-box h3{
-    color:#0284c7;
-    font-size:24px;
-    margin-bottom:8px;
+    color:#0f766e;
+
+    font-size:22px;
+
+    margin-bottom:7px;
+}
+
+.education-box p{
+    color:#475569;
 }
 
 /* =========================
@@ -217,17 +271,22 @@ section{
 ========================= */
 
 #skills{
-    background:#f5f7fb;
+    background:#f8fafc;
 }
 
 .skills{
+
     display:flex;
+
     justify-content:center;
+
     flex-wrap:wrap;
-    gap:15px;
+
+    gap:16px;
 }
 
 .skill{
+
     background:white;
 
     padding:15px 25px;
@@ -236,7 +295,20 @@ section{
 
     font-weight:bold;
 
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    color:#0f766e;
+
+    box-shadow:
+    0 6px 18px rgba(15,23,42,0.08);
+
+    border:1px solid #ccfbf1;
+
+    transition:0.3s;
+}
+
+.skill:hover{
+    transform:translateY(-4px);
+
+    background:#ccfbf1;
 }
 
 /* =========================
@@ -244,31 +316,76 @@ section{
 ========================= */
 
 #projects{
-    background:white;
+    background:#e0f2fe;
 }
 
 .projects{
+
     display:flex;
+
     justify-content:center;
+
     flex-wrap:wrap;
+
     gap:25px;
 }
 
 .project{
-    width:300px;
 
-    background:#f8fafc;
+    width:310px;
 
-    padding:25px;
+    background:white;
+
+    padding:28px;
 
     border-radius:15px;
 
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    box-shadow:
+    0 8px 25px rgba(15,23,42,0.10);
+
+    transition:0.3s;
+}
+
+.project:hover{
+    transform:translateY(-7px);
 }
 
 .project h3{
-    color:#0284c7;
-    margin-bottom:10px;
+
+    color:#0f766e;
+
+    font-size:22px;
+
+    margin-bottom:12px;
+}
+
+.project p{
+    color:#475569;
+
+    margin-bottom:18px;
+}
+
+/* PROJECT BUTTON */
+
+.project-btn{
+
+    display:inline-block;
+
+    background:#0f766e;
+
+    color:white;
+
+    padding:10px 18px;
+
+    border-radius:7px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+}
+
+.project-btn:hover{
+    background:#115e59;
 }
 
 /* =========================
@@ -276,18 +393,23 @@ section{
 ========================= */
 
 #certificates{
-    background:#f5f7fb;
+    background:#f8fafc;
 }
 
 .certificates{
+
     display:flex;
+
     justify-content:center;
+
     flex-wrap:wrap;
+
     gap:30px;
 }
 
 .certificate{
-    width:380px;
+
+    width:360px;
 
     background:white;
 
@@ -295,31 +417,51 @@ section{
 
     border-radius:15px;
 
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    box-shadow:
+    0 8px 25px rgba(15,23,42,0.09);
 
     text-align:center;
 }
 
 .certificate-box{
-    height:220px;
+
+    height:180px;
 
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 
-    background:#e0f2fe;
+    padding:20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ccfbf1,
+        #e0f2fe
+    );
 
     border-radius:10px;
 
-    color:#0284c7;
+    color:#0f766e;
 
-    font-size:20px;
+    font-size:19px;
+
     font-weight:bold;
 }
 
 .certificate h3{
-    color:#0284c7;
+
+    color:#0f766e;
+
     margin-top:15px;
+
+    margin-bottom:7px;
+}
+
+.certificate p{
+    color:#64748b;
 }
 
 /* =========================
@@ -327,25 +469,39 @@ section{
 ========================= */
 
 #resume{
-    background:white;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ecfeff,
+        #ccfbf1
+    );
+
     text-align:center;
 }
 
 .resume-box{
+
     max-width:700px;
+
     margin:auto;
 
-    background:#f8fafc;
+    background:white;
 
     padding:40px;
 
     border-radius:15px;
 
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    box-shadow:
+    0 8px 25px rgba(15,23,42,0.10);
 }
 
 .resume-box p{
+
     font-size:18px;
+
+    color:#475569;
+
     margin-bottom:20px;
 }
 
@@ -354,8 +510,11 @@ section{
 ========================= */
 
 #contact{
-    background:#111827;
+
+    background:#0f172a;
+
     color:white;
+
     text-align:center;
 }
 
@@ -364,18 +523,28 @@ section{
 }
 
 .contact-box{
+
     max-width:700px;
+
     margin:auto;
 }
 
 .contact-box p{
+
     font-size:18px;
-    margin:15px;
+
+    margin:17px;
 }
 
 .contact-box a{
-    color:#38bdf8;
+
+    color:#2dd4bf;
+
     text-decoration:none;
+}
+
+.contact-box a:hover{
+    text-decoration:underline;
 }
 
 /* =========================
@@ -383,9 +552,13 @@ section{
 ========================= */
 
 footer{
-    background:#030712;
+
+    background:#020617;
+
     color:white;
+
     text-align:center;
+
     padding:20px;
 }
 
@@ -396,33 +569,70 @@ footer{
 @media(max-width:800px){
 
     nav{
+
         flex-direction:column;
+
         gap:12px;
+
+        padding:15px;
     }
 
     nav ul{
+
         gap:10px;
+
         flex-wrap:wrap;
+
         justify-content:center;
-        font-size:13px;
+
+        font-size:12px;
     }
 
     #home{
+
         flex-direction:column-reverse;
+
         text-align:center;
-        padding-top:180px;
+
+        padding-top:190px;
+
+        gap:35px;
     }
 
     .home-text h1{
+
         font-size:38px;
     }
 
+    .home-text h2{
+
+        font-size:22px;
+    }
+
+    .home-text p{
+
+        font-size:16px;
+    }
+
     .profile{
+
         width:220px;
+
         height:220px;
     }
 
+    .section-title{
+
+        font-size:30px;
+    }
+
     .certificate{
+
+        width:100%;
+    }
+
+    .project{
+
         width:100%;
     }
 
@@ -499,29 +709,33 @@ Hello, I'm
 </h1>
 
 <h2>
-B.Tech CSE Student
+B.Tech CSE Student | 2nd Year
 </h2>
 
 <p>
+
 Welcome to my personal portfolio website.
 I am passionate about programming,
 web development, data science,
 data analytics and building useful
 technology projects.
+
 </p>
 
 <a href="#about" class="btn">
 Explore My Portfolio
 </a>
 
-<a href="resume.pdf" class="btn" target="_blank">
+<a href="resume.pdf"
+class="btn"
+target="_blank">
+
 View My Resume
+
 </a>
 
 </div>
 
-
-<!-- PROFILE PHOTO -->
 
 <div>
 
@@ -549,26 +763,33 @@ About Me
 <div class="about-box">
 
 <p>
+
 Hello! I am
 <b>Nageswara Rao Jangili</b>,
-a B.Tech Computer Science and Engineering student.
+a second-year B.Tech Computer Science
+and Engineering student at Sai University, Chennai.
+
 </p>
 
 <br>
 
 <p>
+
 I am interested in programming,
 web development, data science,
 data analytics, Power BI and
 modern technologies.
+
 </p>
 
 <br>
 
 <p>
+
 I enjoy learning new technologies
 and creating practical projects
-that solve real-world problems.
+that can solve real-world problems.
+
 </p>
 
 </div>
@@ -586,6 +807,48 @@ that solve real-world problems.
 Education
 </h2>
 
+<div class="education-container">
+
+
+<div class="education-box">
+
+<h3>
+1st Class to 7th Class
+</h3>
+
+<p>
+<b>Sri Vani UP School, Kadavakuduru</b>
+</p>
+
+</div>
+
+
+<div class="education-box">
+
+<h3>
+8th Class to 10th Class
+</h3>
+
+<p>
+<b>Z.P.H. High School, Kadavakuduru</b>
+</p>
+
+</div>
+
+
+<div class="education-box">
+
+<h3>
+Intermediate
+</h3>
+
+<p>
+<b>Sri Uma Maheswara Junior College, Ongole</b>
+</p>
+
+</div>
+
+
 <div class="education-box">
 
 <h3>
@@ -601,9 +864,11 @@ School of Computing and Data Science
 </p>
 
 <p>
-Currently pursuing B.Tech in
-Computer Science and Engineering.
+Currently pursuing B.Tech - Second Year
 </p>
+
+</div>
+
 
 </div>
 
@@ -622,23 +887,41 @@ My Skills
 
 <div class="skills">
 
-<div class="skill">Python</div>
+<div class="skill">
+Python
+</div>
 
-<div class="skill">HTML</div>
+<div class="skill">
+HTML
+</div>
 
-<div class="skill">CSS</div>
+<div class="skill">
+CSS
+</div>
 
-<div class="skill">JavaScript</div>
+<div class="skill">
+JavaScript
+</div>
 
-<div class="skill">Data Science</div>
+<div class="skill">
+Data Science
+</div>
 
-<div class="skill">Data Analytics</div>
+<div class="skill">
+Data Analytics
+</div>
 
-<div class="skill">Power BI</div>
+<div class="skill">
+Power BI
+</div>
 
-<div class="skill">GitHub</div>
+<div class="skill">
+GitHub
+</div>
 
-<div class="skill">Web Development</div>
+<div class="skill">
+Web Development
+</div>
 
 </div>
 
@@ -658,6 +941,8 @@ My Projects
 <div class="projects">
 
 
+<!-- PORTFOLIO -->
+
 <div class="project">
 
 <h3>
@@ -665,27 +950,55 @@ Personal Portfolio
 </h3>
 
 <p>
+
 A responsive personal portfolio
-website created using HTML and CSS.
+website created using HTML and CSS
+to showcase my education, skills,
+projects and certificates.
+
 </p>
+
+<a
+href="https://nageswararao-j-127.github.io/"
+target="_blank"
+class="project-btn">
+
+View Portfolio
+
+</a>
 
 </div>
 
+
+<!-- HOTEL WEBSITE -->
 
 <div class="project">
 
 <h3>
-Hotel Website
+NAG Stay Hotel
 </h3>
 
 <p>
+
 A modern hotel website project
-with rooms, services and
-contact information.
+with rooms, services, booking
+information and contact details.
+
 </p>
+
+<a
+href="https://nageswararao-j-127.github.io/index.html/"
+target="_blank"
+class="project-btn">
+
+View Project
+
+</a>
 
 </div>
 
+
+<!-- DATA ANALYTICS -->
 
 <div class="project">
 
@@ -694,9 +1007,12 @@ Data Analytics Project
 </h3>
 
 <p>
+
 A data analytics project focused
 on analysing data and creating
-useful insights.
+useful insights using data
+analytics and visualization tools.
+
 </p>
 
 </div>
@@ -807,9 +1123,11 @@ My Resume
 <div class="resume-box">
 
 <p>
+
 You can view or download my latest resume
 to learn more about my education, skills,
 projects and experience.
+
 </p>
 
 <a
@@ -849,14 +1167,20 @@ Contact Me
 
 
 <p>
+
 📧 Email:
+
 <a href="mailto:njangili637@gmail.com">
+
 njangili637@gmail.com
+
 </a>
+
 </p>
 
 
 <p>
+
 🔗 LinkedIn:
 
 <a
@@ -871,6 +1195,7 @@ Nageswara Rao Jangili
 
 
 <p>
+
 💻 GitHub:
 
 <a
@@ -896,8 +1221,10 @@ nageswararao-j-127
 <footer>
 
 <p>
+
 © 2026 Nageswara Rao.
 All Rights Reserved.
+
 </p>
 
 </footer>
@@ -906,6 +1233,5 @@ All Rights Reserved.
 </body>
 
 </html>
-```
 
 
