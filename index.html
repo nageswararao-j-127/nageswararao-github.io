@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -8,10 +7,19 @@
 
 <title>Nageswara Rao | Portfolio</title>
 
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 <style>
 
 /* =========================
-   GENERAL
+   RESET
 ========================= */
 
 *{
@@ -22,11 +30,22 @@
 }
 
 body{
-    font-family:Arial, sans-serif;
-    background:#f0fdfa;
-    color:#1e293b;
+    font-family:'Poppins', sans-serif;
+    color:#172033;
+    background:#ffffff;
     line-height:1.6;
 }
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+}
+
 
 /* =========================
    NAVBAR
@@ -38,9 +57,9 @@ nav{
     left:0;
     width:100%;
 
-    background:#0f172a;
+    background:#071426;
 
-    padding:17px 7%;
+    padding:17px 3%;
 
     display:flex;
     justify-content:space-between;
@@ -48,592 +67,1030 @@ nav{
 
     z-index:1000;
 
-    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+    box-shadow:0 3px 15px rgba(0,0,0,0.2);
 }
 
 .logo{
-    color:#2dd4bf;
-    font-size:25px;
-    font-weight:bold;
+    color:#ffffff;
+    font-size:21px;
+    font-weight:700;
+    letter-spacing:.5px;
 }
 
 nav ul{
     display:flex;
     list-style:none;
-    gap:20px;
+    gap:30px;
 }
 
 nav ul li a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
+    color:#ffffff;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
 }
 
 nav ul li a:hover{
-    color:#2dd4bf;
+    color:#24d9ff;
 }
 
+
 /* =========================
-   HOME
+   HERO
 ========================= */
 
 #home{
-
     min-height:100vh;
 
-    padding:140px 8% 70px;
+    padding:130px 5% 70px;
 
     display:flex;
-
-    justify-content:center;
     align-items:center;
-
-    gap:80px;
+    justify-content:center;
 
     background:
+    radial-gradient(circle at 20% 20%,
+    rgba(135,70,255,.45),
+    transparent 35%),
+
+    radial-gradient(circle at 85% 50%,
+    rgba(0,190,255,.35),
+    transparent 35%),
+
     linear-gradient(
-        135deg,
-        #ecfeff,
-        #ccfbf1,
-        #e0f2fe
+        120deg,
+        #29146f,
+        #162e9b,
+        #005a9e
     );
-}
-
-.home-text{
-    max-width:650px;
-}
-
-.home-text h1{
-    font-size:50px;
-    margin-bottom:15px;
-}
-
-.home-text h1 span{
-    color:#0f766e;
-}
-
-.home-text h2{
-    font-size:25px;
-    margin-bottom:20px;
-    color:#334155;
-}
-
-.home-text p{
-    font-size:18px;
-    color:#475569;
-    margin-bottom:25px;
-}
-
-.btn{
-    display:inline-block;
-
-    background:#0f766e;
 
     color:white;
 
-    padding:13px 24px;
-
-    border-radius:8px;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
-    margin:5px;
-
-    transition:0.3s;
+    overflow:hidden;
 }
 
-.btn:hover{
-    background:#115e59;
+.hero-container{
+    width:1100px;
+    max-width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:70px;
+}
+
+.hero-content{
+    flex:1;
+}
+
+.hello{
+    display:inline-block;
+
+    padding:6px 16px;
+
+    border:1px solid rgba(255,255,255,.7);
+
+    border-radius:25px;
+
+    font-size:14px;
+
+    margin-bottom:15px;
+}
+
+.hero-content h1{
+    font-size:54px;
+
+    line-height:1.15;
+
+    margin-bottom:15px;
+
+    font-weight:800;
+}
+
+.hero-content h2{
+    color:#20d8ff;
+
+    font-size:21px;
+
+    margin-bottom:15px;
+}
+
+.hero-content p{
+    max-width:650px;
+
+    font-size:16px;
+
+    color:#f0f5ff;
+
+    margin-bottom:25px;
+}
+
+.hero-buttons{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+}
+
+.btn{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    padding:11px 21px;
+
+    border-radius:6px;
+
+    font-weight:600;
+
+    font-size:14px;
+
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#13c8f2;
+    color:white;
+}
+
+.btn-primary:hover{
+    background:#0aa6cf;
     transform:translateY(-2px);
 }
 
-/* =========================
-   PROFILE IMAGE
-========================= */
+.btn-outline{
+    border:1px solid white;
+    color:white;
+}
 
-.profile{
-    width:290px;
-    height:290px;
+.btn-outline:hover{
+    background:white;
+    color:#173184;
+}
+
+.social-icons{
+    display:flex;
+    gap:15px;
+
+    margin-top:22px;
+}
+
+.social-icons a{
+    width:38px;
+    height:38px;
+
+    border:1px solid white;
 
     border-radius:50%;
 
-    object-fit:cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-    border:7px solid #0f766e;
+    color:white;
 
-    background:#ccfbf1;
-
-    box-shadow:
-    0 15px 35px rgba(15,118,110,0.25);
+    transition:.3s;
 }
 
+.social-icons a:hover{
+    background:white;
+    color:#173184;
+}
+
+.hero-photo{
+    width:350px;
+    height:350px;
+
+    border-radius:50%;
+
+    padding:8px;
+
+    background:white;
+
+    border:7px solid rgba(40,170,255,.45);
+
+    box-shadow:
+    0 0 0 15px rgba(0,150,255,.08),
+    0 15px 50px rgba(0,0,0,.3);
+
+    object-fit:cover;
+}
+
+
 /* =========================
-   SECTIONS
+   SECTION COMMON
 ========================= */
 
 section{
-    padding:90px 8%;
+    padding:65px 5%;
 }
 
-.section-title{
-    text-align:center;
+.section-heading{
+    display:flex;
 
-    font-size:36px;
+    align-items:center;
 
-    margin-bottom:45px;
+    gap:14px;
 
-    color:#0f172a;
+    margin-bottom:30px;
 }
+
+.section-heading i{
+    width:45px;
+    height:45px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    font-size:21px;
+
+    color:#6840c6;
+
+    background:#f0eaff;
+}
+
+.section-heading h2{
+    font-size:27px;
+
+    color:#172033;
+}
+
+.section-heading h2::after{
+    content:"";
+
+    display:block;
+
+    width:38px;
+    height:3px;
+
+    background:#5c38c9;
+
+    margin-top:5px;
+}
+
 
 /* =========================
    ABOUT
 ========================= */
 
 #about{
-    background:#f8fafc;
+    background:#ffffff;
 }
 
-.about-box{
-
-    max-width:900px;
+.about-grid{
+    max-width:1150px;
 
     margin:auto;
 
-    background:white;
+    display:grid;
 
-    padding:35px;
+    grid-template-columns:1.1fr .9fr;
 
-    border-radius:15px;
+    gap:55px;
 
-    box-shadow:
-    0 8px 25px rgba(15,23,42,0.08);
-
-    font-size:18px;
+    align-items:center;
 }
 
-.about-box b{
-    color:#0f766e;
+.about-text p{
+    margin-bottom:18px;
+
+    font-size:15px;
+
+    color:#344054;
 }
+
+.about-card{
+    border:1px solid #d9dce5;
+
+    border-radius:12px;
+
+    padding:25px;
+
+    background:#ffffff;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.04);
+}
+
+.info-row{
+    display:flex;
+
+    align-items:center;
+
+    gap:17px;
+
+    margin-bottom:20px;
+}
+
+.info-row:last-child{
+    margin-bottom:0;
+}
+
+.info-row i{
+    width:32px;
+
+    color:#7542d2;
+
+    font-size:20px;
+
+    text-align:center;
+}
+
+.info-row strong{
+    display:block;
+
+    font-size:14px;
+}
+
+.info-row span{
+    font-size:13px;
+
+    color:#455065;
+}
+
 
 /* =========================
    EDUCATION
 ========================= */
 
 #education{
-    background:#ecfeff;
+    background:
+    linear-gradient(
+        120deg,
+        #f0faf8,
+        #eef8f5
+    );
 }
 
-.education-container{
-
-    max-width:900px;
+.education-list{
+    max-width:1150px;
 
     margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:35px;
 }
 
-.education-box{
+.edu-card{
+    position:relative;
 
     background:white;
 
-    padding:25px 30px;
+    padding:32px 20px 22px;
 
-    margin-bottom:20px;
+    border:1px solid #dce4e1;
 
-    border-left:6px solid #0f766e;
+    border-radius:9px;
 
-    border-radius:10px;
+    text-align:center;
 
-    box-shadow:
-    0 6px 20px rgba(15,23,42,0.08);
+    min-height:145px;
 
-    transition:0.3s;
+    box-shadow:0 4px 12px rgba(0,0,0,.03);
 }
 
-.education-box:hover{
-    transform:translateX(5px);
+.edu-number{
+    position:absolute;
+
+    top:-22px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:44px;
+    height:44px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:white;
+
+    font-size:18px;
+    font-weight:bold;
+
+    background:#20a86b;
+
+    border:5px solid white;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
 }
 
-.education-box h3{
-    color:#0f766e;
-
-    font-size:22px;
-
-    margin-bottom:7px;
+.edu-card:nth-child(2) .edu-number{
+    background:#139d9d;
 }
 
-.education-box p{
-    color:#475569;
+.edu-card:nth-child(3) .edu-number{
+    background:#176dd3;
 }
+
+.edu-card:nth-child(4) .edu-number{
+    background:#7040c9;
+}
+
+.edu-card h3{
+    color:#139b50;
+
+    font-size:15px;
+
+    margin-bottom:5px;
+}
+
+.edu-card:nth-child(2) h3{
+    color:#118f90;
+}
+
+.edu-card:nth-child(3) h3{
+    color:#1265c7;
+}
+
+.edu-card:nth-child(4) h3{
+    color:#6940c3;
+}
+
+.edu-card p{
+    font-size:13px;
+
+    color:#364152;
+}
+
 
 /* =========================
    SKILLS
 ========================= */
 
 #skills{
-    background:#f8fafc;
+    background:#f7f1ff;
+}
+
+.skills-box{
+    max-width:1150px;
+
+    margin:auto;
+
+    background:#f9f5ff;
+
+    padding:30px;
+
+    border-radius:12px;
 }
 
 .skills{
-
     display:flex;
-
-    justify-content:center;
 
     flex-wrap:wrap;
 
-    gap:16px;
+    gap:15px;
 }
 
 .skill{
-
     background:white;
 
-    padding:15px 25px;
+    border:1px solid #ddd8e8;
 
-    border-radius:10px;
+    padding:9px 18px;
 
-    font-weight:bold;
+    border-radius:6px;
 
-    color:#0f766e;
+    font-size:13px;
 
-    box-shadow:
-    0 6px 18px rgba(15,23,42,0.08);
+    color:#3d4050;
 
-    border:1px solid #ccfbf1;
+    display:flex;
 
-    transition:0.3s;
+    align-items:center;
+
+    gap:8px;
 }
 
-.skill:hover{
-    transform:translateY(-4px);
-
-    background:#ccfbf1;
+.skill i{
+    color:#713fd0;
 }
+
 
 /* =========================
    PROJECTS
 ========================= */
 
 #projects{
-    background:#e0f2fe;
+    background:#eff7ff;
 }
 
 .projects{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+}
+
+.project-card{
+    background:white;
+
+    border:1px solid #dbe3ec;
+
+    border-radius:10px;
+
+    padding:25px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.04);
+
+    transition:.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.project-icon{
+    width:45px;
+    height:45px;
 
     display:flex;
 
     justify-content:center;
+    align-items:center;
 
-    flex-wrap:wrap;
+    border-radius:8px;
 
-    gap:25px;
-}
-
-.project{
-
-    width:310px;
-
-    background:white;
-
-    padding:28px;
-
-    border-radius:15px;
-
-    box-shadow:
-    0 8px 25px rgba(15,23,42,0.10);
-
-    transition:0.3s;
-}
-
-.project:hover{
-    transform:translateY(-7px);
-}
-
-.project h3{
-
-    color:#0f766e;
-
-    font-size:22px;
-
-    margin-bottom:12px;
-}
-
-.project p{
-    color:#475569;
-
-    margin-bottom:18px;
-}
-
-/* PROJECT BUTTON */
-
-.project-btn{
-
-    display:inline-block;
-
-    background:#0f766e;
+    background:#6b3fc6;
 
     color:white;
 
-    padding:10px 18px;
+    font-size:20px;
 
-    border-radius:7px;
-
-    text-decoration:none;
-
-    font-weight:bold;
+    margin-bottom:14px;
 }
 
-.project-btn:hover{
-    background:#115e59;
+.project-card:nth-child(2) .project-icon{
+    background:#0d83d8;
 }
+
+.project-card:nth-child(3) .project-icon{
+    background:#16a085;
+}
+
+.project-card h3{
+    color:#1850a0;
+
+    font-size:16px;
+
+    margin-bottom:10px;
+}
+
+.project-card p{
+    font-size:13px;
+
+    color:#475467;
+
+    margin-bottom:17px;
+}
+
+.project-link{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    padding:8px 14px;
+
+    background:#0d83d8;
+
+    color:white;
+
+    border-radius:5px;
+
+    font-size:12px;
+
+    font-weight:600;
+}
+
+.project-link:hover{
+    background:#0869af;
+}
+
 
 /* =========================
    CERTIFICATES
 ========================= */
 
 #certificates{
-    background:#f8fafc;
+    background:#fff8e9;
 }
 
 .certificates{
+    display:grid;
 
-    display:flex;
+    grid-template-columns:
+    repeat(3,1fr);
 
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:30px;
+    gap:18px;
 }
 
-.certificate{
-
-    width:360px;
-
+.certificate-card{
     background:white;
 
-    padding:20px;
-
-    border-radius:15px;
-
-    box-shadow:
-    0 8px 25px rgba(15,23,42,0.09);
-
-    text-align:center;
-}
-
-.certificate-box{
-
-    height:180px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    padding:20px;
-
-    background:
-    linear-gradient(
-        135deg,
-        #ccfbf1,
-        #e0f2fe
-    );
+    border:1px solid #eadfca;
 
     border-radius:10px;
 
-    color:#0f766e;
+    padding:20px;
 
-    font-size:19px;
+    min-height:150px;
 
-    font-weight:bold;
+    display:flex;
+
+    gap:15px;
+
+    align-items:center;
 }
 
-.certificate h3{
+.certificate-icon{
+    min-width:55px;
+    height:55px;
 
-    color:#0f766e;
+    border-radius:50%;
 
-    margin-top:15px;
+    background:#f3a400;
 
-    margin-bottom:7px;
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:25px;
 }
 
-.certificate p{
-    color:#64748b;
+.certificate-card:nth-child(2) .certificate-icon{
+    background:#1674db;
 }
+
+.certificate-card:nth-child(3) .certificate-icon{
+    background:#18a856;
+}
+
+.certificate-card h3{
+    font-size:14px;
+
+    color:#d88700;
+
+    margin-bottom:6px;
+}
+
+.certificate-card:nth-child(2) h3{
+    color:#1165c4;
+}
+
+.certificate-card:nth-child(3) h3{
+    color:#159348;
+}
+
+.certificate-card p{
+    font-size:12px;
+
+    color:#4b5563;
+}
+
 
 /* =========================
    RESUME
 ========================= */
 
 #resume{
-
-    background:
-    linear-gradient(
-        135deg,
-        #ecfeff,
-        #ccfbf1
-    );
-
-    text-align:center;
+    background:#fff0f3;
 }
 
 .resume-box{
-
-    max-width:700px;
+    max-width:1150px;
 
     margin:auto;
 
-    background:white;
+    display:flex;
 
-    padding:40px;
+    justify-content:space-between;
 
-    border-radius:15px;
+    align-items:center;
 
-    box-shadow:
-    0 8px 25px rgba(15,23,42,0.10);
+    gap:30px;
+
+    background:#fff5f7;
+
+    padding:25px;
+
+    border-radius:10px;
+
+    border:1px solid #f0dce0;
 }
 
 .resume-box p{
+    font-size:14px;
 
-    font-size:18px;
+    color:#475467;
 
-    color:#475569;
-
-    margin-bottom:20px;
+    max-width:650px;
 }
+
+.resume-buttons{
+    display:flex;
+
+    gap:10px;
+
+    flex-shrink:0;
+}
+
+.resume-btn{
+    padding:10px 17px;
+
+    border-radius:5px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+}
+
+.resume-view{
+    background:#ed2334;
+
+    color:white;
+}
+
+.resume-download{
+    border:1px solid #ed2334;
+
+    color:#ed2334;
+
+    background:white;
+}
+
+.resume-view:hover{
+    background:#c91827;
+}
+
 
 /* =========================
    CONTACT
 ========================= */
 
 #contact{
+    background:#eef7ff;
+}
 
-    background:#0f172a;
+.contact-cards{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
+}
+
+.contact-card{
+    background:white;
+
+    border:1px solid #dce4ed;
+
+    border-radius:10px;
+
+    padding:18px 25px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+}
+
+.contact-icon{
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#1389e5;
 
     color:white;
 
-    text-align:center;
+    font-size:19px;
 }
 
-#contact .section-title{
-    color:white;
+.contact-card:nth-child(2) .contact-icon{
+    background:#1268bd;
 }
 
-.contact-box{
-
-    max-width:700px;
-
-    margin:auto;
+.contact-card:nth-child(3) .contact-icon{
+    background:#172033;
 }
 
-.contact-box p{
+.contact-card strong{
+    display:block;
 
-    font-size:18px;
+    font-size:13px;
 
-    margin:17px;
+    color:#172033;
 }
 
-.contact-box a{
+.contact-card a{
+    font-size:12px;
 
-    color:#2dd4bf;
-
-    text-decoration:none;
+    color:#374151;
 }
 
-.contact-box a:hover{
-    text-decoration:underline;
-}
 
 /* =========================
    FOOTER
 ========================= */
 
 footer{
-
-    background:#020617;
+    background:#061226;
 
     color:white;
 
     text-align:center;
 
-    padding:20px;
+    padding:18px;
 }
 
+footer p{
+    font-size:13px;
+}
+
+
 /* =========================
-   MOBILE
+   TOP BUTTON
 ========================= */
 
-@media(max-width:800px){
+.top-button{
+    position:fixed;
 
-    nav{
+    right:20px;
+    bottom:20px;
 
-        flex-direction:column;
+    width:42px;
+    height:42px;
 
-        gap:12px;
+    border-radius:50%;
 
-        padding:15px;
-    }
+    background:#096ec8;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:999;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
 
     nav ul{
-
-        gap:10px;
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-
-        font-size:12px;
+        gap:15px;
     }
 
-    #home{
-
-        flex-direction:column-reverse;
-
-        text-align:center;
-
-        padding-top:190px;
-
+    .hero-container{
         gap:35px;
     }
 
-    .home-text h1{
+    .hero-content h1{
+        font-size:44px;
+    }
 
+    .hero-photo{
+        width:290px;
+        height:290px;
+    }
+
+    .education-list{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+}
+
+
+@media(max-width:750px){
+
+    nav{
+        padding:13px 4%;
+    }
+
+    nav ul{
+        display:none;
+    }
+
+    #home{
+        padding-top:120px;
+    }
+
+    .hero-container{
+        flex-direction:column-reverse;
+
+        text-align:center;
+    }
+
+    .hero-content{
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+    }
+
+    .hero-content h1{
         font-size:38px;
     }
 
-    .home-text h2{
-
-        font-size:22px;
+    .hero-content h2{
+        font-size:18px;
     }
 
-    .home-text p{
-
-        font-size:16px;
+    .hero-photo{
+        width:230px;
+        height:230px;
     }
 
-    .profile{
-
-        width:220px;
-
-        height:220px;
+    .social-icons{
+        justify-content:center;
     }
 
-    .section-title{
+    .about-grid{
+        grid-template-columns:1fr;
 
-        font-size:30px;
+        gap:25px;
     }
 
-    .certificate{
+    .education-list{
+        grid-template-columns:1fr;
 
-        width:100%;
+        gap:28px;
     }
 
-    .project{
+    .projects{
+        grid-template-columns:1fr;
+    }
 
-        width:100%;
+    .certificates{
+        grid-template-columns:1fr;
+    }
+
+    .resume-box{
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+    .resume-buttons{
+        flex-wrap:wrap;
+
+        justify-content:center;
+    }
+
+    .contact-cards{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:55px 5%;
     }
 
 }
@@ -647,48 +1104,32 @@ footer{
 
 
 <!-- =========================
-     NAVIGATION
+     NAVBAR
 ========================= -->
 
 <nav>
 
 <div class="logo">
-Nageswara Rao
+NAGESWARA RAO
 </div>
 
 <ul>
 
-<li>
-<a href="#home">Home</a>
-</li>
+<li><a href="#home">Home</a></li>
 
-<li>
-<a href="#about">About</a>
-</li>
+<li><a href="#about">About</a></li>
 
-<li>
-<a href="#education">Education</a>
-</li>
+<li><a href="#education">Education</a></li>
 
-<li>
-<a href="#skills">Skills</a>
-</li>
+<li><a href="#skills">Skills</a></li>
 
-<li>
-<a href="#projects">Projects</a>
-</li>
+<li><a href="#projects">Projects</a></li>
 
-<li>
-<a href="#certificates">Certificates</a>
-</li>
+<li><a href="#certificates">Certificates</a></li>
 
-<li>
-<a href="#resume">Resume</a>
-</li>
+<li><a href="#resume">Resume</a></li>
 
-<li>
-<a href="#contact">Contact</a>
-</li>
+<li><a href="#contact">Contact</a></li>
 
 </ul>
 
@@ -701,11 +1142,16 @@ Nageswara Rao
 
 <section id="home">
 
-<div class="home-text">
+<div class="hero-container">
+
+<div class="hero-content">
+
+<span class="hello">
+Hello, I'm
+</span>
 
 <h1>
-Hello, I'm
-<span>Nageswara Rao</span>
+Nageswara Rao
 </h1>
 
 <h2>
@@ -713,36 +1159,65 @@ B.Tech CSE Student | 2nd Year
 </h2>
 
 <p>
-
-Welcome to my personal portfolio website.
 I am passionate about programming,
 web development, data science,
 data analytics and building useful
-technology projects.
-
+technology projects that solve
+real-world problems.
 </p>
 
-<a href="#about" class="btn">
+<div class="hero-buttons">
+
+<a href="#about" class="btn btn-primary">
+<i class="fa-solid fa-envelope"></i>
 Explore My Portfolio
 </a>
 
 <a href="resume.pdf"
-class="btn"
-target="_blank">
+target="_blank"
+class="btn btn-outline">
 
-View My Resume
+<i class="fa-solid fa-download"></i>
+View Resume
 
 </a>
 
 </div>
 
 
-<div>
+<div class="social-icons">
+
+<a href="https://www.linkedin.com/in/nageswara-rao-jangili-28b653374"
+target="_blank">
+
+<i class="fa-brands fa-linkedin-in"></i>
+
+</a>
+
+
+<a href="https://github.com/nageswararao-j-127"
+target="_blank">
+
+<i class="fa-brands fa-github"></i>
+
+</a>
+
+
+<a href="mailto:njangili637@gmail.com">
+
+<i class="fa-solid fa-envelope"></i>
+
+</a>
+
+</div>
+
+</div>
+
 
 <img
-class="profile"
 src="profile.jpg"
 alt="Nageswara Rao"
+class="hero-photo"
 >
 
 </div>
@@ -756,41 +1231,129 @@ alt="Nageswara Rao"
 
 <section id="about">
 
-<h2 class="section-title">
+<div class="container">
+
+<div class="about-grid">
+
+<div>
+
+<div class="section-heading">
+
+<i class="fa-regular fa-user"></i>
+
+<h2>
 About Me
 </h2>
 
-<div class="about-box">
+</div>
+
+<div class="about-text">
 
 <p>
-
-Hello! I am
-<b>Nageswara Rao Jangili</b>,
+Hello! I am <b>Nageswara Rao Jangili</b>,
 a second-year B.Tech Computer Science
-and Engineering student at Sai University, Chennai.
-
+and Engineering student at Sai University,
+Chennai.
 </p>
 
-<br>
-
 <p>
-
 I am interested in programming,
 web development, data science,
 data analytics, Power BI and
 modern technologies.
-
 </p>
 
-<br>
-
 <p>
-
 I enjoy learning new technologies
 and creating practical projects
 that can solve real-world problems.
-
 </p>
+
+</div>
+
+</div>
+
+
+<div class="about-card">
+
+<div class="info-row">
+
+<i class="fa-regular fa-calendar"></i>
+
+<div>
+
+<strong>
+Name
+</strong>
+
+<span>
+Nageswara Rao Jangili
+</span>
+
+</div>
+
+</div>
+
+
+<div class="info-row">
+
+<i class="fa-regular fa-envelope"></i>
+
+<div>
+
+<strong>
+Email
+</strong>
+
+<span>
+njangili637@gmail.com
+</span>
+
+</div>
+
+</div>
+
+
+<div class="info-row">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<div>
+
+<strong>
+Degree
+</strong>
+
+<span>
+B.Tech CSE
+</span>
+
+</div>
+
+</div>
+
+
+<div class="info-row">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<div>
+
+<strong>
+Location
+</strong>
+
+<span>
+Chennai, Tamil Nadu
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 
@@ -803,72 +1366,107 @@ that can solve real-world problems.
 
 <section id="education">
 
-<h2 class="section-title">
+<div class="container">
+
+<div class="section-heading">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<h2>
 Education
 </h2>
 
-<div class="education-container">
+</div>
 
 
-<div class="education-box">
+<div class="education-list">
+
+
+<div class="edu-card">
+
+<div class="edu-number">
+1
+</div>
 
 <h3>
 1st Class to 7th Class
 </h3>
 
 <p>
-<b>Sri Vani UP School, Kadavakuduru</b>
+Sri Vani UP School
+</p>
+
+<p>
+Kadavakuduru
 </p>
 
 </div>
 
 
-<div class="education-box">
+<div class="edu-card">
+
+<div class="edu-number">
+2
+</div>
 
 <h3>
 8th Class to 10th Class
 </h3>
 
 <p>
-<b>Z.P.H. High School, Kadavakuduru</b>
+Z.P.H. High School
+</p>
+
+<p>
+Kadavakuduru
 </p>
 
 </div>
 
 
-<div class="education-box">
+<div class="edu-card">
+
+<div class="edu-number">
+3
+</div>
 
 <h3>
 Intermediate
 </h3>
 
 <p>
-<b>Sri Uma Maheswara Junior College, Ongole</b>
+Sri Uma Maheswara
+</p>
+
+<p>
+Junior College, Ongole
 </p>
 
 </div>
 
 
-<div class="education-box">
+<div class="edu-card">
+
+<div class="edu-number">
+4
+</div>
 
 <h3>
-B.Tech - Computer Science and Engineering
+B.Tech (CSE)
 </h3>
 
 <p>
-<b>Sai University, Chennai</b>
+Sai University, Chennai
 </p>
 
 <p>
-School of Computing and Data Science
-</p>
-
-<p>
-Currently pursuing B.Tech - Second Year
+Second Year (Present)
 </p>
 
 </div>
 
+
+</div>
 
 </div>
 
@@ -881,46 +1479,80 @@ Currently pursuing B.Tech - Second Year
 
 <section id="skills">
 
-<h2 class="section-title">
+<div class="container">
+
+<div class="section-heading">
+
+<i class="fa-solid fa-code"></i>
+
+<h2>
 My Skills
 </h2>
 
+</div>
+
+
+<div class="skills-box">
+
 <div class="skills">
 
+
 <div class="skill">
+<i class="fa-brands fa-python"></i>
 Python
 </div>
 
+
 <div class="skill">
+<i class="fa-brands fa-html5"></i>
 HTML
 </div>
 
+
 <div class="skill">
+<i class="fa-brands fa-css3-alt"></i>
 CSS
 </div>
 
+
 <div class="skill">
+<i class="fa-brands fa-js"></i>
 JavaScript
 </div>
 
+
 <div class="skill">
+<i class="fa-solid fa-brain"></i>
 Data Science
 </div>
 
+
 <div class="skill">
+<i class="fa-solid fa-chart-column"></i>
 Data Analytics
 </div>
 
+
 <div class="skill">
+<i class="fa-solid fa-chart-pie"></i>
 Power BI
 </div>
 
+
 <div class="skill">
+<i class="fa-brands fa-github"></i>
 GitHub
 </div>
 
+
 <div class="skill">
+<i class="fa-solid fa-globe"></i>
 Web Development
+</div>
+
+
+</div>
+
 </div>
 
 </div>
@@ -934,89 +1566,108 @@ Web Development
 
 <section id="projects">
 
-<h2 class="section-title">
+<div class="container">
+
+<div class="section-heading">
+
+<i class="fa-solid fa-briefcase"></i>
+
+<h2>
 My Projects
 </h2>
+
+</div>
+
 
 <div class="projects">
 
 
-<!-- PORTFOLIO -->
+<div class="project-card">
 
-<div class="project">
+<div class="project-icon">
+
+<i class="fa-solid fa-user"></i>
+
+</div>
 
 <h3>
 Personal Portfolio
 </h3>
 
 <p>
-
 A responsive personal portfolio
 website created using HTML and CSS
 to showcase my education, skills,
 projects and certificates.
-
 </p>
 
 <a
 href="https://nageswararao-j-127.github.io/"
 target="_blank"
-class="project-btn">
+class="project-link">
 
 View Portfolio
+<i class="fa-solid fa-arrow-up-right-from-square"></i>
 
 </a>
 
 </div>
 
 
-<!-- HOTEL WEBSITE -->
+<div class="project-card">
 
-<div class="project">
+<div class="project-icon">
+
+<i class="fa-solid fa-hotel"></i>
+
+</div>
 
 <h3>
 NAG Stay Hotel
 </h3>
 
 <p>
-
 A modern hotel website project
 with rooms, services, booking
 information and contact details.
-
 </p>
 
 <a
 href="https://nageswararao-j-127.github.io/index.html/"
 target="_blank"
-class="project-btn">
+class="project-link">
 
 View Project
+<i class="fa-solid fa-arrow-up-right-from-square"></i>
 
 </a>
 
 </div>
 
 
-<!-- DATA ANALYTICS -->
+<div class="project-card">
 
-<div class="project">
+<div class="project-icon">
+
+<i class="fa-solid fa-chart-column"></i>
+
+</div>
 
 <h3>
 Data Analytics Project
 </h3>
 
 <p>
-
 A data analytics project focused
 on analysing data and creating
 useful insights using data
 analytics and visualization tools.
-
 </p>
 
 </div>
 
+
+</div>
 
 </div>
 
@@ -1029,20 +1680,31 @@ analytics and visualization tools.
 
 <section id="certificates">
 
-<h2 class="section-title">
+<div class="container">
+
+<div class="section-heading">
+
+<i class="fa-solid fa-trophy"></i>
+
+<h2>
 My Certificates
 </h2>
+
+</div>
+
 
 <div class="certificates">
 
 
-<div class="certificate">
+<div class="certificate-card">
 
-<div class="certificate-box">
+<div class="certificate-icon">
 
-Data Science & Predictive Analytics
+<i class="fa-solid fa-medal"></i>
 
 </div>
+
+<div>
 
 <h3>
 Data Science & Predictive Analytics
@@ -1058,14 +1720,18 @@ Sai University
 
 </div>
 
+</div>
 
-<div class="certificate">
 
-<div class="certificate-box">
+<div class="certificate-card">
 
-Data Analytics & Power BI
+<div class="certificate-icon">
+
+<i class="fa-solid fa-medal"></i>
 
 </div>
+
+<div>
 
 <h3>
 Data Analytics and Power BI
@@ -1081,14 +1747,18 @@ Sai University
 
 </div>
 
+</div>
 
-<div class="certificate">
 
-<div class="certificate-box">
+<div class="certificate-card">
 
-Modern Web Development
+<div class="certificate-icon">
+
+<i class="fa-solid fa-medal"></i>
 
 </div>
+
+<div>
 
 <h3>
 Modern Web Development
@@ -1104,6 +1774,10 @@ Sai University
 
 </div>
 
+</div>
+
+
+</div>
 
 </div>
 
@@ -1116,9 +1790,18 @@ Sai University
 
 <section id="resume">
 
-<h2 class="section-title">
+<div class="container">
+
+<div class="section-heading">
+
+<i class="fa-regular fa-file-lines"></i>
+
+<h2>
 My Resume
 </h2>
+
+</div>
+
 
 <div class="resume-box">
 
@@ -1130,23 +1813,35 @@ projects and experience.
 
 </p>
 
+
+<div class="resume-buttons">
+
 <a
 href="resume.pdf"
-class="btn"
-target="_blank">
+target="_blank"
+class="resume-btn resume-view">
+
+<i class="fa-regular fa-eye"></i>
 
 View Resume
 
 </a>
 
+
 <a
 href="resume.pdf"
-class="btn"
-download>
+download
+class="resume-btn resume-download">
+
+<i class="fa-solid fa-download"></i>
 
 Download Resume
 
 </a>
+
+</div>
+
+</div>
 
 </div>
 
@@ -1159,16 +1854,35 @@ Download Resume
 
 <section id="contact">
 
-<h2 class="section-title">
+<div class="container">
+
+<div class="section-heading">
+
+<i class="fa-regular fa-paper-plane"></i>
+
+<h2>
 Contact Me
 </h2>
 
-<div class="contact-box">
+</div>
 
 
-<p>
+<div class="contact-cards">
 
-📧 Email:
+
+<div class="contact-card">
+
+<div class="contact-icon">
+
+<i class="fa-solid fa-envelope"></i>
+
+</div>
+
+<div>
+
+<strong>
+Email
+</strong>
 
 <a href="mailto:njangili637@gmail.com">
 
@@ -1176,12 +1890,24 @@ njangili637@gmail.com
 
 </a>
 
-</p>
+</div>
+
+</div>
 
 
-<p>
+<div class="contact-card">
 
-🔗 LinkedIn:
+<div class="contact-icon">
+
+<i class="fa-brands fa-linkedin-in"></i>
+
+</div>
+
+<div>
+
+<strong>
+LinkedIn
+</strong>
 
 <a
 href="https://www.linkedin.com/in/nageswara-rao-jangili-28b653374"
@@ -1191,12 +1917,24 @@ Nageswara Rao Jangili
 
 </a>
 
-</p>
+</div>
+
+</div>
 
 
-<p>
+<div class="contact-card">
 
-💻 GitHub:
+<div class="contact-icon">
+
+<i class="fa-brands fa-github"></i>
+
+</div>
+
+<div>
+
+<strong>
+GitHub
+</strong>
 
 <a
 href="https://github.com/nageswararao-j-127"
@@ -1206,8 +1944,12 @@ nageswararao-j-127
 
 </a>
 
-</p>
+</div>
 
+</div>
+
+
+</div>
 
 </div>
 
@@ -1221,17 +1963,21 @@ nageswararao-j-127
 <footer>
 
 <p>
-
-© 2026 Nageswara Rao.
-All Rights Reserved.
-
+© 2026 Nageswara Rao. All Rights Reserved.
 </p>
 
 </footer>
 
 
+<!-- TOP BUTTON -->
+
+<a href="#home" class="top-button">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+</a>
+
+
 </body>
 
 </html>
-
-
